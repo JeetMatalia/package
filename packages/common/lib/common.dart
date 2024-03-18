@@ -1,0 +1,1 @@
+export 'package:common/theme/color_theme.dart';
