@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:flutter/material.dart';
+part of 'theme.dart';
 
 @immutable
 class PracticeAppColors extends ThemeExtension<PracticeAppColors> {
@@ -97,9 +97,9 @@ class PracticeAppColors extends ThemeExtension<PracticeAppColors> {
 
   @override
   ThemeExtension<PracticeAppColors> lerp(
-      ThemeExtension<PracticeAppColors>? other,
-      double t,
-      ) {
+    ThemeExtension<PracticeAppColors>? other,
+    double t,
+  ) {
     // We don't use colors lerp for the moment
     // Colors are not well defined enough to maintain this
     if (other == null) return this;
@@ -151,6 +151,6 @@ PracticeAppColors myColorsExtension = const PracticeAppColors(
   primaryLight: Color(0xff14A2B9),
 );
 
-extension PracticeAppColorsExtensions on ThemeData {
-  PracticeAppColors get practiceAppColors => extension<PracticeAppColors>()!;
+extension PracticeAppExtensions on ThemeData {
+  PracticeAppColors get myAppColors => myColorsExtension;
 }
