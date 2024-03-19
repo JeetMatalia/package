@@ -5,11 +5,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project_assets/gen/assets.gen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  TextEditingController textfield = TextEditingController();
+  MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -28,17 +29,22 @@ class MyApp extends StatelessWidget {
                   appBar: AppBarWidget(),
                   body: Container(
                     //child: Assets.image.image(height: 10), //image generation
-                    child:
+                    //child:
                         // PrimaryButton(text: 'hiii', onPressed: () { print("object");},
                         // ),
-                        Center(
-                            child: CustomCheckbox(
-                      onChecked: () {},
-                      isChecked: false,
-                    )),
+                    //     Center(
+                    //         child: CustomCheckbox(
+                    //   onChecked: () {},
+                    //   isChecked: false,
+                    // )),
 
                     //theme color calling
-                  )),
+                    //DatePickField(controller: "null",hintText: "",validation: , label: '',),
+                    child: RegularInputField(controller: textfield ,hintText:"dsd" ,isValidatorCompulsory: false,validation: (p0) {
+
+                    }, ),
+                  )
+              ),
             ));
   }
 }
